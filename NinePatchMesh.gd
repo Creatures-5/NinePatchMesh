@@ -74,6 +74,9 @@ func _create_mesh():
 
 func _assign_textures(i):
 	var material = StandardMaterial3D.new()
+#	var subtexture = AtlasTexture.new()
+#	subtexture.set_atlas(texture)
+#	subtexture.set_region(Rect2(0,0,10,10))
 	material.albedo_texture = texture
 	material.texture_filter = BaseMaterial3D.TEXTURE_FILTER_NEAREST
 	match horizontal:

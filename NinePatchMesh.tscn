@@ -1,11 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://b3igo1enwd061"]
+[gd_scene load_steps=6 format=3 uid="uid://b3igo1enwd061"]
 
 [ext_resource type="Script" path="res://NinePatchMesh.gd" id="1_vcs2y"]
 [ext_resource type="Texture2D" uid="uid://byanlc7isk48c" path="res://template_texture.png" id="2_xkdbm"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pgqjg"]
-uv1_scale = Vector3(1, 0.5, 1)
-texture_filter = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ln67q"]
 uv1_scale = Vector3(1, 0.5, 1)
@@ -17,7 +13,6 @@ _surfaces = [{
 "aabb": AABB(0, 0, 0, 2, 1.00001, 0),
 "attribute_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63),
 "format": 34393292817,
-"material": SubResource("StandardMaterial3D_pgqjg"),
 "primitive": 4,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
@@ -48,7 +43,3 @@ shape = SubResource("ConcavePolygonShape3D_5q4tf")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.3156, 3.05602)
-
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
