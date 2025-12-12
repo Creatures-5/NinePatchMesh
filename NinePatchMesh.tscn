@@ -48,3 +48,7 @@ shape = SubResource("ConcavePolygonShape3D_5q4tf")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.3156, 3.05602)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0

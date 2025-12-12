@@ -62,8 +62,7 @@ func _create_mesh():
 		data[ArrayMesh.ARRAY_TEX_UV] = uv_map
 		mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLE_STRIP,data)
 		#assign material to current tile
-		var material = StandardMaterial3D.new()
-		_assign_textures(i,material)
+		_assign_textures(i)
 		#set next tile location
 		row = row + 1
 		if row == 3:
@@ -73,7 +72,8 @@ func _create_mesh():
 	var collision_shape = mesh.create_trimesh_shape()
 	$StaticBody3D/CollisionShape3D.shape = collision_shape
 
-func _assign_textures(i,material):
+func _assign_textures(i):
+	var material = StandardMaterial3D.new()
 	material.albedo_texture = texture
 	material.texture_filter = BaseMaterial3D.TEXTURE_FILTER_NEAREST
 	match horizontal:
@@ -85,11 +85,3 @@ func _assign_textures(i,material):
 		"Tile":
 			material.uv1_scale.y = y
 	mesh.surface_set_material(i,material)
-
-func _scale_x():
-	pass
-#	mat_5.uv1_scale.x = scale.x
-
-func _scale_y():
-	pass
-#	mat_5.uv1_scale.y = scale.y
